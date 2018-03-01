@@ -1,0 +1,33 @@
+<div ng-show="!dateChosen && weatherData">
+    <div class="detail">
+        <div ng-show="clickedDay" class="weather-detail">
+            <div class="title">{{clickedDay.date}} {{clickedDay.type}} {{clickedDay.low}}/{{clickedDay.high}}</div>
+            <div>{{clickedDay.fx}} {{clickedDay.fl}} 日出时间: {{clickedDay.sunrise}} 日落时间: {{clickedDay.sunset}}</div>
+            <div>空气质量指数: {{clickedDay.aqi}}</div>
+            <div>{{clickedDay.notice}}</div>
+        </div>
+    </div>
+    <div class="today">    
+        <div>{{today}}</div>
+        <div>城市: {{weatherData.city}}</div>
+        <div>湿度: {{weatherData.data.shidu}}</div>
+        <div>pm25: {{weatherData.data.pm25}}</div>
+        <div>pm10: {{weatherData.data.pm10}}</div>
+        <div>{{weatherData.data.quality}}</div>
+        <div>{{weatherData.data.wendu}} ℃</div>
+        <div>{{weatherData.data.ganmao}}</div>
+    </div>
+
+    <div id='calendar'></div>
+
+    <div class="forecast">
+        <div class="day" ng-repeat="day in forecast" ng-click="showDetail(day)">
+            <div>{{day.date}}</div>
+            <div>{{day.type}}</div>
+            <div>{{day.low}}/{{day.high}}</div>
+        </div>
+    </div>
+
+</div>
+
+<div ng-show="dateChosen">{{dateChosen}}</div>

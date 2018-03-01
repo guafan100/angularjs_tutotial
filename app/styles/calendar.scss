@@ -1,0 +1,39 @@
+.detail {
+    height: 100px;
+    margin: 5px 0;
+
+    .weather-detail {
+        height: 100%;
+        border: 1px solid rgb(241, 60, 0);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .title {
+        font-weight: 750;
+        font-size: 18px;
+    }
+}
+
+.today {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid rgb(241, 60, 0);
+    margin-bottom: 5px;
+}
+
+.forecast {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.day {
+    border: 1px solid rgb(241, 60, 0);
+}
